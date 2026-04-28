@@ -9,15 +9,9 @@ class Person
         _name = n;
         _pay = p;
     }
-
-    public string GetName()
+    public override string ToString()
     {
-        return _name;
-    }
-
-    public int GetPay()
-    {
-        return _pay;
+        return _name + ", lön: " + _pay;
     }
 }
 
@@ -97,7 +91,7 @@ class PersonalRegister
         Console.WriteLine("Dina anställda:");
         foreach (var p in _register.GetPersons())
         {
-            Console.WriteLine(n++ + ": " + p.GetName() + ", lön: " + p.GetPay());
+            Console.WriteLine(p.ToString());
         }
     }
 }
